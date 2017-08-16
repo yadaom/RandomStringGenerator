@@ -12,10 +12,10 @@ public class TestRandomStringGenerator {
     final RandomStringGenerator randomStringGenerator = new RandomStringGenerator();
     HashSet<String> ids = new HashSet<>();
     for (int i = 1; i < 1000; i++) {
-      final String s = randomStringGenerator.randomString();
-      System.out.println(String.valueOf(i) + ". ID: " + s);
-      if (!ids.add(s)) {
-        System.out.println("\t\tDuplicate id: " + s);
+      final String randomString = randomStringGenerator.randomString();
+      System.out.println(String.valueOf(i) + ". ID: " + randomString);
+      if (!ids.add(randomString)) {
+        System.out.println("\t\tDuplicate id: " + randomString);
         System.exit(1);
       }
     }
