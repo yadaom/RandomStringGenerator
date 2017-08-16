@@ -1,0 +1,19 @@
+group 'random-string-generator'
+version '1.0'
+
+
+apply plugin: 'java'
+apply plugin: 'application'
+compileJava.options.encoding = 'UTF-8'
+mainClassName = "org.om.util.TestRandomStringGenerator"
+
+
+jar {
+  entryCompression = ZipEntryCompression.DEFLATED
+  archivesBaseName  = 'random-string-generator'
+}
+
+
+task wrapper(type: Wrapper){
+
+}
